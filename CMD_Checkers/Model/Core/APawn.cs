@@ -12,7 +12,13 @@
             Team = team;
         }
 
-        public abstract bool CanMove(int toX, int toY);
+        public virtual bool CanMove(int toX, int toY, int gridSize)
+        {
+            return ((toX < gridSize)
+                && (toX >= 0)
+                && (toY < gridSize)
+                && (toY >= 0));
+        }
         public abstract bool IsKing();
     }
 }

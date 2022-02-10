@@ -89,9 +89,12 @@ namespace CMD_Checkers.Model
 
             APawn pawn = Grid.Squares[x, y].Pawn;
 
-            if(pawn == null || pawn.CanMove(toX,toY))
+            if(pawn == null || !pawn.CanMove(toX, toY, GridSize))
                 return false;
-            return false;
+
+
+
+            return true;
 
         }
 
